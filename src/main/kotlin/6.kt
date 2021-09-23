@@ -17,7 +17,7 @@ fun main() {
         .readText()
         .trim()
         .split("\n\n")
-        .map { it.split("\n") }
+        .map { it.lines() }
 
     groups
         .sumOf { peopleQuestionsAny(it).size }
